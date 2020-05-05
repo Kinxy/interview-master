@@ -12,7 +12,7 @@ function Product({ rating = 3, maxRating = 5 }) {
   };
 
   return (
-    <div class="rating">
+    <div className="rating">
       Rating: {generateRating()}
     </div>
   )

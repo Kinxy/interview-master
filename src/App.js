@@ -11,7 +11,7 @@ function App() {
         <header className="App-header">
           <h1>Products<mark>R</mark>us</h1>
         </header>
-        <div class="products-header">
+        <div className="products-header">
           <h1>Products for sale</h1>
         </div>
         <Products />
