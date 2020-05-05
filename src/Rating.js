@@ -1,11 +1,20 @@
 import React from "react";
+import { updateRating } from "./store/products/actions";
+import { useDispatch } from "react-redux";
 
-function Product({ rating = 3, maxRating = 5 }) {
+function Rating({ product }) {
+  const dispatch = useDispatch();
+
+  const updateUserRating = (newRating) => dispatch(updateRating(product.id, newRating));
+
   const generateRating = () => {
+    const maxRating = 5;
+
     let finalRating = [];
-    for (let x = 0; x < maxRating; x += 1) {
+
+    for (let i = 0; i < maxRating; i += 1) {
       finalRating.push(
-        <div className={`rating-pip ${x + 1 <= rating ? "active" : ""}`} />
+        <button className={`rating-pip ${i + 1 <= product.rating ? "active" : ""}`} onClick={() => updateUserRating(i + 1)} />
       );
     }
     return finalRating;
@@ -18,4 +27,4 @@ function Product({ rating = 3, maxRating = 5 }) {
   )
 }
 
-export default Product;
+export default Rating;

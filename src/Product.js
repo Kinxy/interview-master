@@ -3,10 +3,10 @@ import Rating from "./Rating";
 
 function Product({ product }) {
   return (
-    <div className="product">
+    <div className="product" id={product.id}>
       <h2>{product.title}</h2>
       <p>{product.description}</p>
-      <Rating />
+      <Rating product={product} />
     </div>
   );
 }
