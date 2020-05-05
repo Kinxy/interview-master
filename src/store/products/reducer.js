@@ -52,7 +52,7 @@ export const products = (
           }
           else return {
             ...product,
-            ratingHover: null,
+            ratingHover: undefined,
           }
         })
       }

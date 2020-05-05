@@ -13,10 +13,10 @@ function Rating({ product }) {
     const maxRating = 5;
 
     let finalRating = [];
-    let productRating = (product.ratingHover != null)? product.ratingHover : product.rating; 
+    let productRating = (product.ratingHover)? product.ratingHover : product.rating; 
     for (let i = 0; i < maxRating; i += 1) {
       finalRating.push(
-        <button className={`rating-pip ${i + 1 <= productRating ? "active" : ""}`} 
+        <button key={`rating-${i+1}`} className={`rating-pip ${i + 1 <= productRating ? "active" : ""}`} 
           onClick={() => updateUserRating(i + 1)} 
           onMouseEnter={() => updateUserHoverRating(i + 1)}
           onMouseLeave={() => removeUserHoverRating()}

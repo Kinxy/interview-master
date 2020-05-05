@@ -9,11 +9,11 @@ function Products() {
   useEffect(() => {
     dispatch(loadProducts());
   }, []);
-  
+
   return (
     <div className="products">
       {products.map(product => (
-        <Product product={product} />
+        <Product product={product} key={product.id} />
       ))}
     </div>
   );
