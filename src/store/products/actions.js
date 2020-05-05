@@ -10,8 +10,8 @@ export const loadProducts = () => ({
     },
     {
       id: 2,
-      title: "Addidas Trainers",
-      description: "Some Addidas trainers you might like to buy"
+      title: "Adidas Trainers",
+      description: "Some Adidas trainers you might like to buy"
     },
     {
       id: 3,

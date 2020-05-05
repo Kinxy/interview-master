@@ -11,6 +11,9 @@ function App() {
         <header className="App-header">
           <h1>Products R Us</h1>
         </header>
+        <div class="products-header">
+          <h1>Products for sale</h1>
+        </div>
         <Products />
       </div>
     </Provider>
