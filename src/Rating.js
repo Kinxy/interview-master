@@ -11,7 +11,11 @@ function Product({ rating = 3, maxRating = 5 }) {
     return finalRating;
   };
 
-  return <div class="rating">{generateRating()}</div>;
+  return (
+    <div class="rating">
+      Rating: {generateRating()}
+    </div>
+  )
 }
 
 export default Product;
