@@ -4,8 +4,19 @@
 
 header {
   text-align: left;
+  padding: 15px 15px;
+  border-bottom: 1px solid #000;
+  background: #666666;
+  color: white;
+  font-size: 20px;
+}
+
+.products-header {
+  text-align: left;
   padding: 20px 20px;
   border-bottom: 1px solid #000;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
 }
 
 .products {
