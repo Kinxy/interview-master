@@ -24,7 +24,7 @@ mark {
   text-align: left;
   padding: 5px 40px;
   color: rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 25px;
   border-bottom: 1px solid var(--main-product-grey);
 }
 
@@ -39,11 +39,22 @@ mark {
   border-bottom: 1px solid var(--main-product-grey);
 }
 
+h2 {
+  margin-bottom: 0px;
+}
+p {
+  margin-top: 0px;
+}
+
+.product .rating {
+  line-height: 50pt;
+}
+
 .product .rating .rating-pip {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 3px;
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
   border-radius: 50%;
   border-color: white;
   background: var(--main-product-grey);
