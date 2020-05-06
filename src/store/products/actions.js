@@ -1,7 +1,5 @@
 export const LOAD_PRODUCTS = "LOAD_PRODUCTS";
 export const UPDATE_RATING = "UPDATE_RATING";
-export const UPDATE_RATING_HOVER = "UPDATE_RATING_HOVER";
-export const REMOVE_RATING_HOVER = "REMOVE_RATING_HOVER";
 
 export const loadProducts = () => ({
     type: LOAD_PRODUCTS,
@@ -38,21 +36,6 @@ export const updateRating = (id, rating) => ({
   payload: {
     id,
     rating,
-  }
-});
-
-export const updateRatingHover = (id, rating) => ({
-  type: UPDATE_RATING_HOVER,
-  payload: {
-    id,
-    rating,
-  }
-});
-
-export const removeRatingHover = id => ({
-  type: REMOVE_RATING_HOVER,
-  payload: {
-    id,
   }
 });
 

@@ -1,25 +1,23 @@
-import React from "react";
-import { updateRating, updateRatingHover, removeRatingHover } from "./store/products/actions";
+import React, { useState } from "react";
+import { updateRating } from "./store/products/actions";
 import { useDispatch } from "react-redux";
 
 function Rating({ product }) {
   const dispatch = useDispatch();
+  const [hoverRating, setHoverRating] = useState(product.rating);
 
   const updateUserRating = (newRating) => dispatch(updateRating(product.id, newRating));
-  const updateUserHoverRating = (newRating) => dispatch(updateRatingHover(product.id, newRating));
-  const removeUserHoverRating = () => dispatch(removeRatingHover(product.id));
-
+  
   const generateRating = () => {
     const maxRating = 5;
-
     let finalRating = [];
-    let productRating = (product.ratingHover)? product.ratingHover : product.rating; 
+
     for (let i = 0; i < maxRating; i += 1) {
       finalRating.push(
-        <button key={`rating-${i+1}`} className={`rating-pip ${i + 1 <= productRating ? "active" : ""}`} 
-          onClick={() => updateUserRating(i + 1)} 
-          onMouseEnter={() => updateUserHoverRating(i + 1)}
-          onMouseLeave={() => removeUserHoverRating()}
+        <button key={`rating-${i+1}`} className={`rating-pip ${i + 1 <= hoverRating ? "active" : ""}`} 
+          onClick={ () => updateUserRating(i + 1) } 
+          onMouseEnter={ () => setHoverRating(i + 1) }
+          onMouseLeave={ () => setHoverRating(product.rating) }
         />
       );
     }
