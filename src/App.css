@@ -41,8 +41,8 @@ mark {
 
 .product .rating .rating-pip {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   margin-right: 5px;
   border-radius: 50%;
   background: var(--main-product-grey);;

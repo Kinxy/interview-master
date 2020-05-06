@@ -13,8 +13,6 @@ export const products = (
     case UPDATE_RATING: {
       const productId = action.payload.id;
       const userRating = action.payload.rating;
-
-      console.warn('reducer', state, action.payload)
       return {
         ...state,
         list: state.list.map(product => {
